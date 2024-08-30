@@ -1,4 +1,4 @@
-package io.springmvc.app.domain.entity;
+package io.springmvc.web.domain.entity;
 
 import lombok.Data;
 
