@@ -73,6 +73,15 @@ public class BasicItemController {
         return "basic/item";
     }
 
+    /**
+     * PRG - Post/Redirect/Get
+     */
+    @PostMapping("/add")
+    public String addItemV5(Item item) {
+        itemRepository.save(item);
+        return "redirect:/basic/items/" + item.getId();
+    }
+
     @GetMapping("/{itemId}/edit")
     public String editForm(@PathVariable Long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
@@ -84,15 +93,6 @@ public class BasicItemController {
     public String edit(@PathVariable Long itemId, @ModelAttribute Item item) {
         itemRepository.update(itemId, item);
         return "redirect:/basic/items/{itemId}";
-    }
-
-    /**
-     * PRG - Post/Redirect/Get
-     */
-    @PostMapping("/add")
-    public String addItemV5(Item item) {
-        itemRepository.save(item);
-        return "redirect:/basic/items/" + item.getId();
     }
 
     /**
