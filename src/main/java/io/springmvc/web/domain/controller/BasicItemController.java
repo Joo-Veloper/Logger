@@ -1,3 +1,4 @@
+/*
 package io.springmvc.web.domain.controller;
 
 import io.springmvc.web.domain.entity.Item;
@@ -50,34 +51,46 @@ public class BasicItemController {
         return "basic/item";
     }
 
-    /**
+    */
+/**
      * @ModelAttribute("item") Item item
      * model.addAttribute("item", item); 자동 추가
-     */
+     *//*
 
-    /*@PostMapping("/add")*/
+
+    */
+/*@PostMapping("/add")*//*
+
     public String addItemV2(@ModelAttribute("item") Item item, Model model) {
         itemRepository.save(item);
          model.addAttribute("item", item); //자동 추가, 생략 가능
         return "basic/item";
     }
 
-    /*@PostMapping("/add")*/
+    */
+/*@PostMapping("/add")*//*
+
     public String addItemV3(@ModelAttribute("item") Item item) {
         itemRepository.save(item);
         return "basic/item";
     }
 
-    /*@PostMapping("/add")*/
+    */
+/*@PostMapping("/add")*//*
+
     public String addItemV4(Item item) {
         itemRepository.save(item);
         return "basic/item";
     }
 
-    /**
+    */
+/**
      * PRG - Post/Redirect/Get
-     */
-    /*@PostMapping("/add")*/
+     *//*
+
+    */
+/*@PostMapping("/add")*//*
+
     public String addItemV5(Item item) {
         itemRepository.save(item);
         return "redirect:/basic/items/" + item.getId();
@@ -104,12 +117,15 @@ public class BasicItemController {
         return "redirect:/basic/items/{itemId}";
     }
 
-    /**
+    */
+/**
      * Test Data
-     */
+     *//*
+
     @PostConstruct
     public void init() {
         itemRepository.save(new Item("itemA", 10000, 10));
         itemRepository.save(new Item("itemB", 20000, 20));
     }
 }
+*/
