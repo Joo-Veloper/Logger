@@ -1,7 +1,7 @@
 package io.springmvc;
 
-import io.springmvc.web.domain.entity.Item;
-import io.springmvc.web.domain.repository.ItemRepository;
+import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.web.domain.item.repository.ItemRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

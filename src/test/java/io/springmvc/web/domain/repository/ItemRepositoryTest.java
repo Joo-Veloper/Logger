@@ -1,6 +1,7 @@
 package io.springmvc.web.domain.repository;
 
-import io.springmvc.web.domain.entity.Item;
+import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.web.domain.item.repository.ItemRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

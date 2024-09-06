@@ -1,9 +1,9 @@
-package io.springmvc.web.domain.controller;
+package io.springmvc.web.domain.item.controller;
 
-import io.springmvc.web.domain.entity.DeliveryCode;
-import io.springmvc.web.domain.entity.Item;
-import io.springmvc.web.domain.entity.ItemType;
-import io.springmvc.web.domain.repository.ItemRepository;
+import io.springmvc.web.domain.item.entity.DeliveryCode;
+import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.web.domain.item.entity.ItemType;
+import io.springmvc.web.domain.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
