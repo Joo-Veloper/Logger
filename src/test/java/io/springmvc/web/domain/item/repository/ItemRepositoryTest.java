@@ -1,4 +1,4 @@
-package io.springmvc.web.domain.repository;
+package io.springmvc.web.domain.item.repository;
 
 import io.springmvc.web.domain.item.entity.Item;
 import io.springmvc.web.domain.item.repository.ItemRepository;
