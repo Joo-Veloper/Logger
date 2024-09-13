@@ -1,6 +1,6 @@
 package io.springmvc.web.domain.validation;
 
-import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.domain.item.entity.Item;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;

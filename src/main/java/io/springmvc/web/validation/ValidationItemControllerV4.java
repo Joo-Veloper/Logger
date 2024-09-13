@@ -1,12 +1,10 @@
 package io.springmvc.web.validation;
 
 
-import io.springmvc.web.domain.item.entity.Item;
-import io.springmvc.web.domain.item.repository.ItemRepository;
-import io.springmvc.web.domain.item.repository.SaveCheck;
-import io.springmvc.web.domain.item.repository.UpdateCheck;
-import io.springmvc.web.validation.form.ItemSaveForm;
-import io.springmvc.web.validation.form.ItemUpdateForm;
+import io.springmvc.domain.item.entity.Item;
+import io.springmvc.domain.item.repository.ItemRepository;
+import io.springmvc.web.item.form.ItemSaveForm;
+import io.springmvc.web.item.form.ItemUpdateForm;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

@@ -1,17 +1,15 @@
 package io.springmvc.web.validation;
 
 
-import io.springmvc.web.domain.item.entity.Item;
-import io.springmvc.web.domain.item.repository.ItemRepository;
-import io.springmvc.web.domain.item.repository.SaveCheck;
-import io.springmvc.web.domain.item.repository.UpdateCheck;
-import jakarta.validation.Valid;
+import io.springmvc.domain.item.entity.Item;
+import io.springmvc.domain.item.repository.ItemRepository;
+import io.springmvc.domain.item.repository.SaveCheck;
+import io.springmvc.domain.item.repository.UpdateCheck;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;

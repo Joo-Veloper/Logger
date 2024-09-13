@@ -1,8 +1,8 @@
-package io.springmvc.web.domain.message;
+package io.springmvc.domain.message;
 
 
-import io.springmvc.web.domain.item.entity.Item;
-import io.springmvc.web.domain.item.repository.ItemRepository;
+import io.springmvc.domain.item.entity.Item;
+import io.springmvc.domain.item.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

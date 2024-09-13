@@ -1,6 +1,6 @@
 package io.springmvc.web.validation;
 
-import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.domain.item.entity.Item;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;

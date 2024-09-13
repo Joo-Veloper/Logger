@@ -1,6 +1,6 @@
-package io.springmvc.web.domain.item.repository;
+package io.springmvc.domain.item.repository;
 
-import io.springmvc.web.domain.item.entity.Item;
+import io.springmvc.domain.item.entity.Item;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package io.springmvc.web.validation;
 
-import io.springmvc.web.validation.form.ItemSaveForm;
+import io.springmvc.web.item.form.ItemSaveForm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;

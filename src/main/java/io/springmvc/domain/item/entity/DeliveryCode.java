@@ -1,4 +1,4 @@
-package io.springmvc.web.domain.item.entity;
+package io.springmvc.domain.item.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
