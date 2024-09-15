@@ -2,6 +2,7 @@ package io.springmvc.web;
 
 import io.springmvc.domain.member.entity.Member;
 import io.springmvc.domain.member.repository.MemberRepository;
+import io.springmvc.web.config.SessionConst;
 import io.springmvc.web.session.SessionManger;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;

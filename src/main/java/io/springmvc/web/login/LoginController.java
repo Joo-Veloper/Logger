@@ -2,7 +2,7 @@ package io.springmvc.web.login;
 
 import io.springmvc.domain.login.service.LoginService;
 import io.springmvc.domain.member.entity.Member;
-import io.springmvc.web.SessionConst;
+import io.springmvc.web.config.SessionConst;
 import io.springmvc.web.session.SessionManger;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
