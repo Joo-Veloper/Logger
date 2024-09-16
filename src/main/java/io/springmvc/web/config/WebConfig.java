@@ -5,8 +5,10 @@ import io.springmvc.web.filter.LogFilter;
 import io.springmvc.web.filter.LoginCheckFilter;
 import io.springmvc.web.interceptor.LogInterceptor;
 import io.springmvc.web.interceptor.LoginCheckInterceptor;
+import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -50,6 +52,17 @@ public class WebConfig implements WebMvcConfigurer {
         filterRegistrationBean.setOrder(2);
         filterRegistrationBean.addUrlPatterns("/*");
 
+        return filterRegistrationBean;
+    }
+
+    /** Servlet Exception - Filter*/
+    @Bean
+    public FilterRegistrationBean logFilter2() {
+        FilterRegistrationBean<Filter> filterRegistrationBean = new FilterRegistrationBean<>();
+        filterRegistrationBean.setFilter(new LogFilter());
+        filterRegistrationBean.setOrder(1);
+        filterRegistrationBean.addUrlPatterns("/*");
+        filterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ERROR);
         return filterRegistrationBean;
     }
 }
