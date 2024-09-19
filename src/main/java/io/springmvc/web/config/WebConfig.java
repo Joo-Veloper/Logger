@@ -1,6 +1,7 @@
 package io.springmvc.web.config;
 
 import io.springmvc.exception.resolver.MyHandlerExceptionResolver;
+import io.springmvc.exception.resolver.UserHandlerExceptionResolver;
 import io.springmvc.web.argumentresolver.LoginMemberArgumentResolver;
 import io.springmvc.web.filter.LogFilter;
 import io.springmvc.web.filter.LoginCheckFilter;
@@ -40,6 +41,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> resolvers) {
         resolvers.add(new MyHandlerExceptionResolver());
+        resolvers.add(new UserHandlerExceptionResolver());
     }
 
 //    @Bean
