@@ -32,10 +32,11 @@ public class WebConfig implements WebMvcConfigurer {
                 .order(1)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/css/**", "/*.ico", "/error", "/error-page/**"); //오류 페이지 경로
-        registry.addInterceptor(new LoginCheckInterceptor())
+        // api test
+        /*registry.addInterceptor(new LoginCheckInterceptor())
                 .order(2)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/", "members/add", "/login", "/logout", "/css/**", "/*.ico", "/error");
+                .excludePathPatterns("/", "members/add", "/login", "/logout", "/css/**", "/*.ico", "/error");*/
     }
 
     @Override
