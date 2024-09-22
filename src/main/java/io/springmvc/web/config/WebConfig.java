@@ -6,6 +6,7 @@ import io.springmvc.typeconverter.converter.IntegerToStringConverter;
 import io.springmvc.typeconverter.converter.IpPortToStringConverter;
 import io.springmvc.typeconverter.converter.StringToIntegerConverter;
 import io.springmvc.typeconverter.converter.StringToIpPortConverter;
+import io.springmvc.typeconverter.formatter.MyNumberFormatter;
 import io.springmvc.web.argumentresolver.LoginMemberArgumentResolver;
 import io.springmvc.web.filter.LogFilter;
 import io.springmvc.web.filter.LoginCheckFilter;
@@ -42,15 +43,20 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/", "members/add", "/login", "/logout", "/css/**", "/*.ico", "/error");*/
     }
 
-    /** converter
+    /**
+     * converter
      * Converter 를 추가하면 추가한 Converter 가 기본 Converter 보다 높은 우선 순위를 가진다.
      */
     @Override
     public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(new StringToIntegerConverter());
-        registry.addConverter(new IntegerToStringConverter());
+//        주석처리 우선순위
+//        registry.addConverter(new StringToIntegerConverter());
+//        registry.addConverter(new IntegerToStringConverter());
         registry.addConverter(new StringToIpPortConverter());
         registry.addConverter(new IpPortToStringConverter());
+
+        // 추가
+        registry.addFormatter(new MyNumberFormatter());
     }
 
     @Override
