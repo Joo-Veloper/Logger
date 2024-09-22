@@ -3,18 +3,16 @@ package io.springmvc.web.config;
 import io.springmvc.exception.resolver.MyHandlerExceptionResolver;
 import io.springmvc.exception.resolver.UserHandlerExceptionResolver;
 import io.springmvc.typeconverter.converter.IntegerToStringConverter;
-import io.springmvc.typeconverter.converter.IpPortToStringConvert;
+import io.springmvc.typeconverter.converter.IpPortToStringConverter;
 import io.springmvc.typeconverter.converter.StringToIntegerConverter;
 import io.springmvc.typeconverter.converter.StringToIpPortConverter;
 import io.springmvc.web.argumentresolver.LoginMemberArgumentResolver;
 import io.springmvc.web.filter.LogFilter;
 import io.springmvc.web.filter.LoginCheckFilter;
 import io.springmvc.web.interceptor.LogInterceptor;
-import io.springmvc.web.interceptor.LoginCheckInterceptor;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
@@ -52,7 +50,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addConverter(new StringToIntegerConverter());
         registry.addConverter(new IntegerToStringConverter());
         registry.addConverter(new StringToIpPortConverter());
-        registry.addConverter(new IpPortToStringConvert());
+        registry.addConverter(new IpPortToStringConverter());
     }
 
     @Override

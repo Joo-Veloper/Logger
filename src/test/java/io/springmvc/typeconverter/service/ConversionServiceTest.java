@@ -1,16 +1,14 @@
 package io.springmvc.typeconverter.service;
 
 import io.springmvc.typeconverter.converter.IntegerToStringConverter;
-import io.springmvc.typeconverter.converter.IpPortToStringConvert;
+import io.springmvc.typeconverter.converter.IpPortToStringConverter;
 import io.springmvc.typeconverter.converter.StringToIntegerConverter;
 import io.springmvc.typeconverter.converter.StringToIpPortConverter;
 import io.springmvc.typeconverter.type.IpPort;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.convert.support.DefaultConversionService;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConversionServiceTest {
     @Test
@@ -20,7 +18,7 @@ class ConversionServiceTest {
         conversionService.addConverter(new StringToIntegerConverter());
         conversionService.addConverter(new IntegerToStringConverter());
         conversionService.addConverter(new StringToIpPortConverter());
-        conversionService.addConverter(new IpPortToStringConvert());
+        conversionService.addConverter(new IpPortToStringConverter());
 
         // 사용
         assertThat(conversionService.convert("10", Integer.class)).isEqualTo(10);

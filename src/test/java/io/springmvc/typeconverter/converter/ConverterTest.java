@@ -1,7 +1,6 @@
 package io.springmvc.typeconverter.converter;
 
 import io.springmvc.typeconverter.type.IpPort;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,7 +22,7 @@ class ConverterTest {
 
     @Test
     void StringToIpPort() {
-        IpPortToStringConvert converter = new IpPortToStringConvert();
+        IpPortToStringConverter converter = new IpPortToStringConverter();
         IpPort source = new IpPort("127.0.0.1", 8080);
         String result = converter.convert(source);
         assertThat(result).isEqualTo("127.0.0.1:8080");
