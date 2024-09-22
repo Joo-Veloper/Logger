@@ -2,6 +2,10 @@ package io.springmvc.web.config;
 
 import io.springmvc.exception.resolver.MyHandlerExceptionResolver;
 import io.springmvc.exception.resolver.UserHandlerExceptionResolver;
+import io.springmvc.typeconverter.converter.IntegerToStringConverter;
+import io.springmvc.typeconverter.converter.IpPortToStringConvert;
+import io.springmvc.typeconverter.converter.StringToIntegerConverter;
+import io.springmvc.typeconverter.converter.StringToIpPortConverter;
 import io.springmvc.web.argumentresolver.LoginMemberArgumentResolver;
 import io.springmvc.web.filter.LogFilter;
 import io.springmvc.web.filter.LoginCheckFilter;
@@ -12,6 +16,7 @@ import jakarta.servlet.Filter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -37,6 +42,17 @@ public class WebConfig implements WebMvcConfigurer {
                 .order(2)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/", "members/add", "/login", "/logout", "/css/**", "/*.ico", "/error");*/
+    }
+
+    /** converter
+     * Converter 를 추가하면 추가한 Converter 가 기본 Converter 보다 높은 우선 순위를 가진다.
+     */
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(new StringToIntegerConverter());
+        registry.addConverter(new IntegerToStringConverter());
+        registry.addConverter(new StringToIpPortConverter());
+        registry.addConverter(new IpPortToStringConvert());
     }
 
     @Override
